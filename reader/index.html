@@ -21,9 +21,12 @@
 
       document.onreadystatechange = function () {
         if (document.readyState == "complete") {
-          window.reader = ePubReader("https://s3.amazonaws.com/moby-dick/", {
-            restore: true,
-          });
+          window.reader = ePubReader(
+            "https://s3.amazonaws.com/sofriendly/HackingFrogs.epub",
+            {
+              restore: true,
+            }
+          );
         }
       };
     </script>
@@ -35,7 +38,7 @@
     <script src="js/libs/screenfull.min.js"></script>
 
     <!-- Render -->
-    <script src="js/epub.js"></script>
+    <script src="https://s3.amazonaws.com/sofriendly/epub.min.js"></script>
 
     <!-- Reader -->
     <script src="js/reader.js"></script>
@@ -50,11 +53,9 @@
   <body>
     <div id="sidebar">
       <div id="panels">
-        <input id="searchBox" placeholder="search" type="search" />
+        <!-- <input id="searchBox" placeholder="search" type="search" /> -->
 
-        <a id="show-Search" class="show_view icon-search" data-view="Search"
-          >Search</a
-        >
+        <!-- <a id="show-Search" class="show_view icon-search" data-view="Search">Search</a> -->
         <a id="show-Toc" class="show_view icon-list-1 active" data-view="Toc"
           >TOC</a
         >
@@ -93,7 +94,7 @@
         </div>
         <div id="title-controls">
           <a id="bookmark" class="icon-bookmark-empty">Bookmark</a>
-          <a id="setting" class="icon-cog">Settings</a>
+          <!-- <a id="setting" class="icon-cog">Settings</a> -->
           <a id="fullscreen" class="icon-resize-full">Fullscreen</a>
         </div>
       </div>
